@@ -37,7 +37,7 @@ set SYCL_CACHE_PERSISTENT=1
 ollama serve
 
 ```
-    Keep this window open.
+# Keep this window open.
 
  # Installing Open WebUI
  Open cmd as administrator and paste this commands:
@@ -51,4 +51,4 @@ open-webui serve
 ```
 
  # After completing the steps run Ollama.bat and OpenWebUI.bat as an administrator(Close Previous Windows)
- #Then go to http://localhost:8080/
+ # Then go to http://localhost:8080/
