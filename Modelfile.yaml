@@ -1,0 +1,9 @@
+FROM 
+TEMPLATE ""{{.System}}
+USER: {{.Prompt}}
+ASSISTANT:""
+PARAMETER temperature 1
+PARAMETER num_ctx 6144
+PARAMETER stop "</s>"
+PARAMETER stop "USER"
+PARAMETER stop "ASSISTANT"
