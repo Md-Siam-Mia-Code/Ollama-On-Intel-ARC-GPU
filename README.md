@@ -1,6 +1,7 @@
 # Prerequisites
 
 1. Ensure that Ollama is not installed on your PC.
+2. Install Intel OneAPI Toolkit.
 
 # Dependencies
 
