@@ -1,21 +1,21 @@
 # Prerequisites
 
 1. Ensure that Ollama is not installed on your PC.
-2. Install Intel OneAPI Toolkit.
 
 # Dependencies
 
 1. Python 3.11
 2. Intel OneAPI Base Toolkit
+3. Anaconda or Miniconda
 
 # Installing Ollama with ipex-llm
 
 Open **Command Prompt** as an administrator and run the following commands:
 
 ```bash
-python -m venv ollama
+conda create -n OLLAMA
 
-C:\Windows\System32\ollama\Scripts\activate.bat
+conda activate OLLAMA
 
 pip install --pre --upgrade ipex-llm[cpp]
 
@@ -35,6 +35,8 @@ set ZES_ENABLE_SYSMAN=1
 
 set SYCL_CACHE_PERSISTENT=1
 
+set OLLAMA_KEEP_ALIVE=-1
+
 ollama serve
 
 ```
@@ -43,7 +45,7 @@ ollama serve
  # Installing Open WebUI
  Open cmd as administrator and paste this commands:
 ```bash
-C:\Windows\System32\ollama\Scripts\activate.bat
+conda activate OLLAMA
 
 pip install open-webui
 
