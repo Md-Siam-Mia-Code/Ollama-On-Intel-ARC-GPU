@@ -1,6 +1,6 @@
 @echo off
 rem Activate the virtual environment
-call "C:\ProgramData\miniconda3\Scripts\activate.bat" GFPGAN
+call "C:\ProgramData\miniconda3\Scripts\activate.bat" OLLAMA
 
 rem Change directory to llama-cpp
 cd /D path/to/your/Ollama-On-Intel-ARC-GPU
