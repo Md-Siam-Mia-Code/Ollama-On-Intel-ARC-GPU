@@ -3,7 +3,7 @@ rem Activate the virtual environment
 call "C:\ProgramData\miniconda3\Scripts\activate.bat" OLLAMA
 
 rem Change directory to llama-cpp
-cd /D path/to/your/Ollama-On-Intel-ARC-GPU
+cd /D path/to/your/Ollama-On-Intel-ARC-GPU/llama-cpp
 
 rem Initialize Ollama
 call init-ollama.bat
