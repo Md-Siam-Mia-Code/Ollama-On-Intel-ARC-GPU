@@ -13,7 +13,7 @@
 Open **Command Prompt** as an administrator and run the following commands:
 
 ```bash
-conda create -n OLLAMA
+conda create -n OLLAMA python=3.11
 
 conda activate OLLAMA
 
