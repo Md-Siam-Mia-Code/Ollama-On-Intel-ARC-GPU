@@ -19,6 +19,10 @@ conda activate OLLAMA
 
 pip install --pre --upgrade ipex-llm[cpp]
 
+git clone https://github.com/Md-Siam-Mia-Code/Ollama-On-Intel-ARC-GPU.git
+
+cd Ollama-On-Intel-ARC-GPU
+
 mkdir llama-cpp
 
 cd llama-cpp
@@ -51,6 +55,13 @@ pip install open-webui
 
 open-webui serve
 
+```
+
+# Edit Ollama.bat
+Edit Ollama.bat line No. 6
+```bash
+rem Change directory to llama-cpp
+cd /D path/to/your/Ollama-On-Intel-ARC-GPU/llama-cpp
 ```
 
  # After completing the steps run Ollama.bat and OpenWebUI.bat as an administrator(Close Previous Windows)
