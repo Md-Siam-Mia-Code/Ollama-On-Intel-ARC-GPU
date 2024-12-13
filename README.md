@@ -29,6 +29,8 @@ cd llama-cpp
 
 init-llama-cpp.bat
 
+init-ollama.bat
+
 "C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
 
 set OLLAMA_NUM_GPU=999
