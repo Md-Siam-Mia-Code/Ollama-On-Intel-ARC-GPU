@@ -27,7 +27,7 @@ mkdir llama-cpp
 
 cd llama-cpp
 
-init-ollama.bat
+init-llama-cpp.bat
 
 "C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
 
@@ -40,6 +40,13 @@ set ZES_ENABLE_SYSMAN=1
 set SYCL_CACHE_PERSISTENT=1
 
 set OLLAMA_KEEP_ALIVE=-1
+
+set SYCL_CACHE_PERSISTENT=1
+
+rem under most circumstances, the following environment variable may improve performance, but sometimes this may also cause performance degradation
+set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
+
+set ONEAPI_DEVICE_SELECTOR=level_zero:[0]
 
 ollama serve
 
