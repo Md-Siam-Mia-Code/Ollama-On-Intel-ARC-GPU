@@ -53,7 +53,7 @@ ollama serve
 # Keep this window open.
 
  # Installing Open WebUI
- Open cmd as administrator and paste this commands:
+ Open cmd as administrator and paste these commands:
 ```bash
 conda activate OLLAMA
 
@@ -70,5 +70,5 @@ rem Change directory to llama-cpp
 cd /D path/to/your/Ollama-On-Intel-ARC-GPU/llama-cpp
 ```
 
- # After completing the steps run Ollama.bat and OpenWebUI.bat as an administrator(Close Previous Windows)
+ After completing the steps run Ollama.bat and OpenWebUI.bat as an administrator(Close Previous Windows)
  # Then go to http://localhost:8080/
