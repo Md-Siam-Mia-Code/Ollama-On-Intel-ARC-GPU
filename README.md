@@ -1,74 +1,110 @@
-# Prerequisites
+# Ollama Installation Guide
 
-1. Ensure that Ollama is not installed on your PC.
+This guide outlines the necessary steps to install and configure **Ollama** with **ipex-llm** and **Open WebUI** on your system.
 
-# Dependencies
+## Prerequisites
 
-1. Python 3.11
-2. Intel OneAPI Base Toolkit = v2024.2.1
-3. Anaconda or Miniconda
+1. **Ensure that Ollama is not already installed** on your system.
 
-# Installing Ollama with ipex-llm
+## Dependencies
 
-Open **Command Prompt** as an administrator and run the following commands:
+Make sure you have the following dependencies installed:
 
-```bash
-conda create -n OLLAMA python=3.11 -y
+1. **Python 3.11**
+2. **Intel OneAPI Base Toolkit** (v2024.2.1)
+3. **Anaconda** or **Miniconda**
 
-conda activate OLLAMA
+## Installing Ollama with ipex-llm
 
-pip install --pre --upgrade ipex-llm[cpp]
+Follow these steps to install **Ollama** with the **ipex-llm** library:
 
-git clone https://github.com/Md-Siam-Mia-Code/OLLAMA.git
+1. **Open Command Prompt as Administrator** and run the following commands:
 
-cd OLLAMA
+    ```bash
+    conda create -n OLLAMA python=3.11 -y
+    conda activate OLLAMA
+    pip install --pre --upgrade ipex-llm[cpp]
+    ```
 
-mkdir llama-cpp
+2. **Clone the Ollama repository**:
 
-cd llama-cpp
+    ```bash
+    git clone https://github.com/Md-Siam-Mia-Code/OLLAMA.git
+    cd OLLAMA
+    ```
 
-init-llama-cpp.bat
+3. **Create and navigate to the `llama-cpp` directory**:
 
-init-ollama.bat
+    ```bash
+    mkdir llama-cpp
+    cd llama-cpp
+    ```
 
-"C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
+4. **Initialize the Llama CPP and Ollama**:
 
-set OLLAMA_NUM_GPU=999
+    ```bash
+    init-llama-cpp.bat
+    init-ollama.bat
+    ```
 
-set no_proxy=localhost,127.0.0.1
+5. **Set environment variables for Intel OneAPI**:
 
-set ZES_ENABLE_SYSMAN=1
+    ```bash
+    "C:\Program Files (x86)\Intel\oneAPI\setvars.bat"
+    ```
 
-set SYCL_CACHE_PERSISTENT=1
+    Then, set the following environment variables:
 
-set OLLAMA_KEEP_ALIVE=-1
+    ```bash
+    set OLLAMA_NUM_GPU=999
+    set no_proxy=localhost,127.0.0.1
+    set ZES_ENABLE_SYSMAN=1
+    set SYCL_CACHE_PERSISTENT=1
+    set OLLAMA_KEEP_ALIVE=-1
+    set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
+    set ONEAPI_DEVICE_SELECTOR=level_zero:[0]
+    ```
 
-set SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS=1
+6. **Start Ollama server**:
 
-set ONEAPI_DEVICE_SELECTOR=level_zero:[0]
+    ```bash
+    ollama serve
+    ```
 
-ollama serve
+    **Important**: Keep the window open where Ollama is running.
 
-```
-# Keep this window open.
+## Installing Open WebUI
 
- # Installing Open WebUI
- Open cmd as administrator and paste these commands:
-```bash
-conda activate OLLAMA
+1. **Activate the `OLLAMA` environment** and install Open WebUI:
 
-pip install open-webui
+    ```bash
+    conda activate OLLAMA
+    pip install open-webui
+    ```
 
-open-webui serve
+2. **Start the Open WebUI server**:
 
-```
+    ```bash
+    open-webui serve
+    ```
 
-# Edit Ollama.bat
-Edit Ollama.bat line No. 6
-```bash
-rem Change directory to llama-cpp
-cd /D path/to/your/OLLAMA/llama-cpp
-```
+## Configuring Ollama.bat
 
- After completing the steps run Ollama.bat and OpenWebUI.bat as an administrator(Close Previous Windows)
- # Then go to http://localhost:8080/
+Edit `Ollama.bat` file:
+
+1. Open `Ollama.bat` and modify line 6 to reflect the correct path for your system:
+
+    ```bash
+    rem Change directory to llama-cpp
+    cd /D path/to/your/OLLAMA/llama-cpp
+    ```
+
+## Running the Application
+
+1. **Run `Ollama.bat` and `OpenWebUI.bat` as Administrator** (close previous windows if open).
+
+2. **Access the application** by navigating to [http://localhost:8080/](http://localhost:8080/) in your web browser.
+
+---
+
+By following these steps, you should have Ollama and Open WebUI set up and ready to use on your system.
