@@ -5,7 +5,7 @@
 # Dependencies
 
 1. Python 3.11
-2. Intel OneAPI Base Toolkit
+2. Intel OneAPI Base Toolkit = v2024.2.1
 3. Anaconda or Miniconda
 
 # Installing Ollama with ipex-llm
